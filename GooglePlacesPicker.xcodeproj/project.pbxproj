@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D7348F811C6F6C47002FEB36 /* GooglePlacesPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7348F9A1C6F6C9D002FEB36 /* place_icon_choosed.png in Resources */ = {isa = PBXBuildFile; fileRef = D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */; };
+		D7348F9B1C6F6C9D002FEB36 /* place_icon_notChoosed.png in Resources */ = {isa = PBXBuildFile; fileRef = D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */; };
+		D7348FC01C6F8DA8002FEB36 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */; };
+		D7348FC11C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */; };
+		D7348FC21C6F8DA8002FEB36 /* GooglePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */; };
+		D7348FC31C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */; };
+		D7348FC41C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */; };
+		D7348FC71C6F91AF002FEB36 /* GooglePlacePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */; };
+		D7348FC81C6F91AF002FEB36 /* GooglePlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D7348F7D1C6F6C47002FEB36 /* GooglePlacesPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GooglePlacesPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlacesPicker.h; sourceTree = "<group>"; };
+		D7348F821C6F6C47002FEB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_icon_choosed.png; sourceTree = "<group>"; };
+		D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_icon_notChoosed.png; sourceTree = "<group>"; };
+		D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlace.swift; path = Classes/GooglePlace.swift; sourceTree = "<group>"; };
+		D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacePickerViewController.swift; path = Classes/GooglePlacePickerViewController.swift; sourceTree = "<group>"; };
+		D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaces.swift; path = Classes/GooglePlaces.swift; sourceTree = "<group>"; };
+		D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationAnimationController.swift; path = Classes/GooglePlacesPresentationAnimationController.swift; sourceTree = "<group>"; };
+		D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationController.swift; path = Classes/GooglePlacesPresentationController.swift; sourceTree = "<group>"; };
+		D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacePickerViewController.xib; path = Classes/GooglePlacePickerViewController.xib; sourceTree = "<group>"; };
+		D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacesCell.xib; path = Classes/GooglePlacesCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7348F791C6F6C47002FEB36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D7348F731C6F6C47002FEB36 = {
+			isa = PBXGroup;
+			children = (
+				D7348F7F1C6F6C47002FEB36 /* GooglePlacesPicker */,
+				D7348F7E1C6F6C47002FEB36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D7348F7E1C6F6C47002FEB36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7348F7D1C6F6C47002FEB36 /* GooglePlacesPicker.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7348F7F1C6F6C47002FEB36 /* GooglePlacesPicker */ = {
+			isa = PBXGroup;
+			children = (
+				D7348F881C6F6C66002FEB36 /* Classes */,
+				D7348F971C6F6C85002FEB36 /* Resources */,
+			);
+			path = GooglePlacesPicker;
+			sourceTree = "<group>";
+		};
+		D7348F881C6F6C66002FEB36 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */,
+				D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */,
+				D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */,
+				D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */,
+				D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */,
+				D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */,
+				D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D7348F971C6F6C85002FEB36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */,
+				D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */,
+				D7348F821C6F6C47002FEB36 /* Info.plist */,
+				D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D7348F7A1C6F6C47002FEB36 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7348F811C6F6C47002FEB36 /* GooglePlacesPicker.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D7348F7C1C6F6C47002FEB36 /* GooglePlacesPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7348F851C6F6C47002FEB36 /* Build configuration list for PBXNativeTarget "GooglePlacesPicker" */;
+			buildPhases = (
+				D7348F781C6F6C47002FEB36 /* Sources */,
+				D7348F791C6F6C47002FEB36 /* Frameworks */,
+				D7348F7A1C6F6C47002FEB36 /* Headers */,
+				D7348F7B1C6F6C47002FEB36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GooglePlacesPicker;
+			productName = GooglePlacesPicker;
+			productReference = D7348F7D1C6F6C47002FEB36 /* GooglePlacesPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7348F741C6F6C47002FEB36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Ihor Rapalyuk";
+				TargetAttributes = {
+					D7348F7C1C6F6C47002FEB36 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = D7348F771C6F6C47002FEB36 /* Build configuration list for PBXProject "GooglePlacesPicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D7348F731C6F6C47002FEB36;
+			productRefGroup = D7348F7E1C6F6C47002FEB36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7348F7C1C6F6C47002FEB36 /* GooglePlacesPicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7348F7B1C6F6C47002FEB36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7348F9B1C6F6C9D002FEB36 /* place_icon_notChoosed.png in Resources */,
+				D7348FC71C6F91AF002FEB36 /* GooglePlacePickerViewController.xib in Resources */,
+				D7348FC81C6F91AF002FEB36 /* GooglePlacesCell.xib in Resources */,
+				D7348F9A1C6F6C9D002FEB36 /* place_icon_choosed.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7348F781C6F6C47002FEB36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7348FC01C6F8DA8002FEB36 /* GooglePlace.swift in Sources */,
+				D7348FC41C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift in Sources */,
+				D7348FC31C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift in Sources */,
+				D7348FC21C6F8DA8002FEB36 /* GooglePlaces.swift in Sources */,
+				D7348FC11C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D7348F831C6F6C47002FEB36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D7348F841C6F6C47002FEB36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D7348F861C6F6C47002FEB36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GooglePlacesPicker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voidstudio.GooglePlacesPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7348F871C6F6C47002FEB36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = GooglePlacesPicker/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.voidstudio.GooglePlacesPicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7348F771C6F6C47002FEB36 /* Build configuration list for PBXProject "GooglePlacesPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7348F831C6F6C47002FEB36 /* Debug */,
+				D7348F841C6F6C47002FEB36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7348F851C6F6C47002FEB36 /* Build configuration list for PBXNativeTarget "GooglePlacesPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7348F861C6F6C47002FEB36 /* Debug */,
+				D7348F871C6F6C47002FEB36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7348F741C6F6C47002FEB36 /* Project object */;
+}
