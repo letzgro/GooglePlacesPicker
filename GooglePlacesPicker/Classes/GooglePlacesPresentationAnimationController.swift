@@ -1,6 +1,8 @@
 //
-//  Created by Pete Callaway on 26/06/2014.
-//  Copyright (c) 2014 Dative Studios. All rights reserved.
+//  GooglePlacesPresentationAnimationController.swift
+//
+//  Created by Ihor Rapalyuk on 2/3/16.
+//  Copyright © 2016 Lezgro. All rights reserved.
 //
 
 import UIKit

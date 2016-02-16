@@ -1,9 +1,8 @@
 //
 //  GooglePlaces.swift
-//  Decidr
 //
-//  Created by LEZGRO on 6/9/15.
-//  Copyright (c) 2015 LEZGRO. All rights reserved.
+//  Created by Ihor Rapalyuk on 2/3/16.
+//  Copyright © 2016 Lezgro. All rights reserved.
 //
 
 import Foundation
