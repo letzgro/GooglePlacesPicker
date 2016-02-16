@@ -8,6 +8,7 @@
 import Foundation
 
 public struct GooglePlace {
+    
     public var placeId: String?
     public var description: String?
 }
