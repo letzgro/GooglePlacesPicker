@@ -8,30 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		D7348F811C6F6C47002FEB36 /* GooglePlacesPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D7348F9A1C6F6C9D002FEB36 /* place_icon_choosed.png in Resources */ = {isa = PBXBuildFile; fileRef = D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */; };
-		D7348F9B1C6F6C9D002FEB36 /* place_icon_notChoosed.png in Resources */ = {isa = PBXBuildFile; fileRef = D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */; };
-		D7348FC01C6F8DA8002FEB36 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */; };
-		D7348FC11C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */; };
-		D7348FC21C6F8DA8002FEB36 /* GooglePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */; };
-		D7348FC31C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */; };
-		D7348FC41C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */; };
-		D7348FC71C6F91AF002FEB36 /* GooglePlacePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */; };
-		D7348FC81C6F91AF002FEB36 /* GooglePlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */; };
+		D75FB7901C74C35D0043EF59 /* GooglePlacesReciever.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75FB78F1C74C35D0043EF59 /* GooglePlacesReciever.swift */; };
+		D7A975B71C745FDC005FA7A9 /* GooglePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A975B01C745FDC005FA7A9 /* GooglePlace.swift */; };
+		D7A975B81C745FDC005FA7A9 /* GooglePlacePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A975B11C745FDC005FA7A9 /* GooglePlacePickerViewController.swift */; };
+		D7A975B91C745FDC005FA7A9 /* GooglePlacePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A975B21C745FDC005FA7A9 /* GooglePlacePickerViewController.xib */; };
+		D7A975BB1C745FDC005FA7A9 /* GooglePlacesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A975B41C745FDC005FA7A9 /* GooglePlacesCell.xib */; };
+		D7A975BC1C745FDC005FA7A9 /* GooglePlacesPresentationAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A975B51C745FDC005FA7A9 /* GooglePlacesPresentationAnimationController.swift */; };
+		D7A975BD1C745FDC005FA7A9 /* GooglePlacesPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A975B61C745FDC005FA7A9 /* GooglePlacesPresentationController.swift */; };
+		D7A975BF1C745FEE005FA7A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A975BE1C745FEE005FA7A9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7348F7D1C6F6C47002FEB36 /* GooglePlacesPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GooglePlacesPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GooglePlacesPicker.h; sourceTree = "<group>"; };
 		D7348F821C6F6C47002FEB36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_icon_choosed.png; sourceTree = "<group>"; };
-		D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = place_icon_notChoosed.png; sourceTree = "<group>"; };
-		D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlace.swift; path = Classes/GooglePlace.swift; sourceTree = "<group>"; };
-		D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacePickerViewController.swift; path = Classes/GooglePlacePickerViewController.swift; sourceTree = "<group>"; };
-		D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlaces.swift; path = Classes/GooglePlaces.swift; sourceTree = "<group>"; };
-		D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationAnimationController.swift; path = Classes/GooglePlacesPresentationAnimationController.swift; sourceTree = "<group>"; };
-		D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationController.swift; path = Classes/GooglePlacesPresentationController.swift; sourceTree = "<group>"; };
-		D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacePickerViewController.xib; path = Classes/GooglePlacePickerViewController.xib; sourceTree = "<group>"; };
-		D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacesCell.xib; path = Classes/GooglePlacesCell.xib; sourceTree = "<group>"; };
+		D75FB78F1C74C35D0043EF59 /* GooglePlacesReciever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesReciever.swift; path = Classes/GooglePlacesReciever.swift; sourceTree = SOURCE_ROOT; };
+		D7A975B01C745FDC005FA7A9 /* GooglePlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlace.swift; path = Classes/GooglePlace.swift; sourceTree = SOURCE_ROOT; };
+		D7A975B11C745FDC005FA7A9 /* GooglePlacePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacePickerViewController.swift; path = Classes/GooglePlacePickerViewController.swift; sourceTree = SOURCE_ROOT; };
+		D7A975B21C745FDC005FA7A9 /* GooglePlacePickerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacePickerViewController.xib; path = Classes/GooglePlacePickerViewController.xib; sourceTree = SOURCE_ROOT; };
+		D7A975B41C745FDC005FA7A9 /* GooglePlacesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GooglePlacesCell.xib; path = Classes/GooglePlacesCell.xib; sourceTree = SOURCE_ROOT; };
+		D7A975B51C745FDC005FA7A9 /* GooglePlacesPresentationAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationAnimationController.swift; path = Classes/GooglePlacesPresentationAnimationController.swift; sourceTree = SOURCE_ROOT; };
+		D7A975B61C745FDC005FA7A9 /* GooglePlacesPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GooglePlacesPresentationController.swift; path = Classes/GooglePlacesPresentationController.swift; sourceTree = SOURCE_ROOT; };
+		D7A975BE1C745FEE005FA7A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +71,13 @@
 		D7348F881C6F6C66002FEB36 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D7348FC51C6F91AF002FEB36 /* GooglePlacePickerViewController.xib */,
-				D7348FC61C6F91AF002FEB36 /* GooglePlacesCell.xib */,
-				D7348FBB1C6F8DA8002FEB36 /* GooglePlace.swift */,
-				D7348FBC1C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift */,
-				D7348FBD1C6F8DA8002FEB36 /* GooglePlaces.swift */,
-				D7348FBE1C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift */,
-				D7348FBF1C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift */,
+				D75FB78F1C74C35D0043EF59 /* GooglePlacesReciever.swift */,
+				D7A975B01C745FDC005FA7A9 /* GooglePlace.swift */,
+				D7A975B11C745FDC005FA7A9 /* GooglePlacePickerViewController.swift */,
+				D7A975B21C745FDC005FA7A9 /* GooglePlacePickerViewController.xib */,
+				D7A975B41C745FDC005FA7A9 /* GooglePlacesCell.xib */,
+				D7A975B51C745FDC005FA7A9 /* GooglePlacesPresentationAnimationController.swift */,
+				D7A975B61C745FDC005FA7A9 /* GooglePlacesPresentationController.swift */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -87,10 +85,9 @@
 		D7348F971C6F6C85002FEB36 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D7348F981C6F6C9D002FEB36 /* place_icon_choosed.png */,
 				D7348F801C6F6C47002FEB36 /* GooglePlacesPicker.h */,
+				D7A975BE1C745FEE005FA7A9 /* Images.xcassets */,
 				D7348F821C6F6C47002FEB36 /* Info.plist */,
-				D7348F991C6F6C9D002FEB36 /* place_icon_notChoosed.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -163,10 +160,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7348F9B1C6F6C9D002FEB36 /* place_icon_notChoosed.png in Resources */,
-				D7348FC71C6F91AF002FEB36 /* GooglePlacePickerViewController.xib in Resources */,
-				D7348FC81C6F91AF002FEB36 /* GooglePlacesCell.xib in Resources */,
-				D7348F9A1C6F6C9D002FEB36 /* place_icon_choosed.png in Resources */,
+				D7A975BF1C745FEE005FA7A9 /* Images.xcassets in Resources */,
+				D7A975BB1C745FDC005FA7A9 /* GooglePlacesCell.xib in Resources */,
+				D7A975B91C745FDC005FA7A9 /* GooglePlacePickerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,11 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7348FC01C6F8DA8002FEB36 /* GooglePlace.swift in Sources */,
-				D7348FC41C6F8DA8002FEB36 /* GooglePlacesPresentationController.swift in Sources */,
-				D7348FC31C6F8DA8002FEB36 /* GooglePlacesPresentationAnimationController.swift in Sources */,
-				D7348FC21C6F8DA8002FEB36 /* GooglePlaces.swift in Sources */,
-				D7348FC11C6F8DA8002FEB36 /* GooglePlacePickerViewController.swift in Sources */,
+				D7A975B71C745FDC005FA7A9 /* GooglePlace.swift in Sources */,
+				D75FB7901C74C35D0043EF59 /* GooglePlacesReciever.swift in Sources */,
+				D7A975BD1C745FDC005FA7A9 /* GooglePlacesPresentationController.swift in Sources */,
+				D7A975BC1C745FDC005FA7A9 /* GooglePlacesPresentationAnimationController.swift in Sources */,
+				D7A975B81C745FDC005FA7A9 /* GooglePlacePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,13 +7,13 @@
 
 import Foundation
 
-public class GooglePlaces {
+public class GooglePlacesReciever {
 
     public static var googlePlacesAPIKey = ""
     
     func googlePlacesByKeyWord(keyWord: String) -> NSDictionary {
         if let keyWordProsecced = keyWord.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
-            url = NSURL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(keyWordProsecced)&key=\(GooglePlaces.googlePlacesAPIKey)") {
+            url = NSURL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(keyWordProsecced)&key=\(GooglePlacesReciever.googlePlacesAPIKey)") {
             if let json = NSData(contentsOfURL: url),
                 data = self.parseData(json) {
                 return data

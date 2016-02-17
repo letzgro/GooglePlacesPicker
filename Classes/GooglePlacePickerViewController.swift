@@ -22,37 +22,57 @@ extension GooglePlacePickerViewControllerDelegate {
 
 public class GooglePlacePickerViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet weak var placeTextField: UITextField?
-    @IBOutlet weak var placesTableView: UITableView?
+    @IBOutlet public weak var placeTextField: UITextField?
+    @IBOutlet public weak var placesTableView: UITableView?
+    @IBOutlet public weak var placesIconImageView: UIImageView?
+    @IBOutlet public weak var navigationBar: UINavigationBar?
+    @IBOutlet public weak var leftBarButtonItem: UIBarButtonItem?
+    @IBOutlet public weak var rightBarButtonItem: UIBarButtonItem?
+    
+    public var placeIconChoosed: UIImage?
+    public var placeIconNotChoosed: UIImage?
     
     private let googlePlacesCellIdentifier = "GooglePlacesCellIdentifier"
     private let googlePlacesNibNameIdentifier = "GooglePlacesCell"
+    private let googlePlacePickerViewControllerNibNameIdentifier = "GooglePlacePickerViewController"
     
-    var autocompletePlaces: [GooglePlace] = []
+    public var navigationBarColor: UIColor = UIColor(red: 104/255, green: 203/255, blue: 223/255, alpha: 1.0)
+    
+    public var autocompletePlaces: [GooglePlace] = []
     
     public var delegate: GooglePlacePickerViewControllerDelegate?
     
-    var googlePlaces = GooglePlaces()
+    var googlePlacesReciever = GooglePlacesReciever()
     
-    var selectedGooglePlace: GooglePlace?
+    public var selectedGooglePlace: GooglePlace?
+    
+    private let currentBoundle: NSBundle
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.placeTextField?.becomeFirstResponder()
         self.placeTextField?.addTarget(self, action: "placeTextFieldDidChange", forControlEvents: .EditingChanged)
-        self.view.layer.cornerRadius = 4
-        
-        self.placesTableView?.registerNib(UINib(nibName: self.googlePlacesNibNameIdentifier, bundle: NSBundle(forClass: self.dynamicType)),
+        self.placesTableView?.registerNib(UINib(nibName: self.googlePlacesNibNameIdentifier, bundle: self.currentBoundle),
             forCellReuseIdentifier: self.googlePlacesCellIdentifier)
+        self.updateUI()
+    }
+    
+    public func updateUI() {
+        self.view.layer.cornerRadius = 4
+        self.placeIconChoosed = UIImage(named: "place_icon_choosed", inBundle: self.currentBoundle, compatibleWithTraitCollection: nil)
+        self.placeIconNotChoosed = UIImage(named: "place_icon_notChoosed", inBundle: self.currentBoundle, compatibleWithTraitCollection: nil)
+        self.placesIconImageView?.image = self.placeIconNotChoosed
     }
     
     required public init?(coder aDecoder: NSCoder) {
+        self.currentBoundle = NSBundle(forClass: GooglePlacePickerViewController.self)
         super.init(coder: aDecoder)
         self.commonInit()
     }
     
-    override init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)  {
-        super.init(nibName: nibNameOrNil, bundle: NSBundle(forClass: self.dynamicType))
+    override public init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)  {
+        self.currentBoundle = NSBundle(forClass: GooglePlacePickerViewController.self)
+        super.init(nibName: self.googlePlacePickerViewControllerNibNameIdentifier, bundle: self.currentBoundle)
         self.commonInit()
     }
     
@@ -110,7 +130,7 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
     private func initList() {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             if let txtPlaceText = self.placeTextField?.text {
-                let googlePlaces = self.googlePlaces.googlePlacesByKeyWord(txtPlaceText)
+                let googlePlaces = self.googlePlacesReciever.googlePlacesByKeyWord(txtPlaceText)
                 if let predictions = googlePlaces.valueForKey("predictions") as? [AnyObject] {
                     self.autocompletePlaces = predictions.flatMap{
                         if let description = $0.valueForKey("description") as? String,
@@ -132,6 +152,7 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
     func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath: NSIndexPath?) {
         if let indexPath = indexPath {
             self.placeTextField?.text = getPlaceName(indexPath.row)
+            self.placesIconImageView?.image = self.placeIconChoosed
         }
     }
     

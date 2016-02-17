@@ -7,8 +7,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GooglePlacePickerViewController" customModule="GooglePlacesPicker" customModuleProvider="target">
             <connections>
+                <outlet property="leftBarButtonItem" destination="gNi-3W-jLn" id="Iza-ZK-fHH"/>
+                <outlet property="navigationBar" destination="I2M-Mi-0ug" id="PpK-dn-QoL"/>
                 <outlet property="placeTextField" destination="mZl-Fg-RV1" id="jHk-Yv-sOB"/>
+                <outlet property="placesIconImageView" destination="J69-Ql-9UR" id="qqb-fc-wzA"/>
                 <outlet property="placesTableView" destination="vUK-9Z-ROM" id="VtO-VF-Y6O"/>
+                <outlet property="rightBarButtonItem" destination="AJs-ki-NvN" id="3Ff-au-0Cz"/>
                 <outlet property="view" destination="k79-pY-WmW" id="6fu-fw-iuw"/>
             </connections>
         </placeholder>

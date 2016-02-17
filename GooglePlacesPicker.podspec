@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
 
   s.source = { :git => "https://github.com/letzgro/GooglePlacesPicker.git", :tag => "0.1.1"}
 
-  s.source_files  = "GooglePlacesPicker/**/*.{swift,storyboard,xib}"
+  s.source_files  = "Classes/**/*.{swift,storyboard,xib}"
 
-  s.resources = "GooglePlacesPicker/**/*.{png,jpeg,jpg}"
+  s.resources = "*.{xcassets}"
 
   s.framework  = "UIKit"
 
