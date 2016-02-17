@@ -27,9 +27,9 @@ pod 'GooglePlacesPicker'
         
 <img src="https://raw.githubusercontent.com/letzgro/GooglePlacesPicker/master/GooglePlacesPickerExample.gif" alt="alt text" width= "200px" align="center">
 
-To customize Picker simply inherite from GooglePlacePickerViewController like this:
-import GooglePlacesPicker
+To customize Picker simply inherite from GooglePlacePickerViewController and override updateUI method like this:
 
+        import GooglePlacesPicker
         class TestGooglePlacePickerViewController: GooglePlacePickerViewController {
             
             override func updateUI() {
