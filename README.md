@@ -27,6 +27,18 @@ pod 'GooglePlacesPicker'
         
 <img src="https://raw.githubusercontent.com/letzgro/GooglePlacesPicker/master/GooglePlacesPickerExample.gif" alt="alt text" width= "200px" align="center">
 
+To customize Picker simply inherite from GooglePlacePickerViewController like this:
+import GooglePlacesPicker
+
+        class TestGooglePlacePickerViewController: GooglePlacePickerViewController {
+            
+            override func updateUI() {
+                super.updateUI()
+                self.leftBarButtonItem?.tintColor = UIColor.blackColor()
+                self.rightBarButtonItem?.tintColor = UIColor.blackColor()
+                self.navigationBar?.barTintColor = UIColor.redColor()
+            }
+        }
 
 Example Project https://github.com/letzgro/GooglePlacesPicker/tree/master/GooglePlacesPickerExample 
 
