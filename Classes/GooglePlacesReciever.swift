@@ -7,23 +7,23 @@
 
 import Foundation
 
-public class GooglePlacesReciever {
+open class GooglePlacesReciever {
 
-    public static var googlePlacesAPIKey = ""
+    open static var googlePlacesAPIKey = ""
     
-    func googlePlacesByKeyWord(keyWord: String) -> NSDictionary {
-        if let keyWordProsecced = keyWord.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()),
-            url = NSURL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(keyWordProsecced)&key=\(GooglePlacesReciever.googlePlacesAPIKey)") {
-            if let json = NSData(contentsOfURL: url),
-                data = self.parseData(json) {
+    func googlePlacesByKeyWord(_ keyWord: String) -> NSDictionary {
+        if let keyWordProsecced = keyWord.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed),
+            let url = URL(string: "https://maps.googleapis.com/maps/api/place/autocomplete/json?input=\(keyWordProsecced)&key=\(GooglePlacesReciever.googlePlacesAPIKey)") {
+            if let json = try? Data(contentsOf: url),
+                let data = self.parseData(json) {
                 return data
             }
         }
         return [:]
     }
 
-    private func parseData(data: NSData) -> NSDictionary? {
-        return (try? NSJSONSerialization.JSONObjectWithData(data,
-            options: NSJSONReadingOptions.MutableContainers) as? NSDictionary) ?? nil
+    fileprivate func parseData(_ data: Data) -> NSDictionary? {
+        return (try? JSONSerialization.jsonObject(with: data,
+            options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary) ?? nil
     }
 }

@@ -6,78 +6,98 @@
 //
 
 import UIKit
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 public protocol GooglePlacePickerViewControllerDelegate {
     
-    func googlePlacePicker(googlePlacePickerViewController: GooglePlacePickerViewController, didSelectGooglePlace googlePlace: GooglePlace)
-    func googlePlacePickerViewControllerDidPressCancelButton(googlePlacePickerViewController: GooglePlacePickerViewController)
+    func googlePlacePicker(_ googlePlacePickerViewController: GooglePlacePickerViewController, didSelectGooglePlace googlePlace: GooglePlace)
+    func googlePlacePickerViewControllerDidPressCancelButton(_ googlePlacePickerViewController: GooglePlacePickerViewController)
 }
 
 extension GooglePlacePickerViewControllerDelegate {
     
-    func googlePlacePicker(googlePlacePickerViewController: GooglePlacePickerViewController,
+    func googlePlacePicker(_ googlePlacePickerViewController: GooglePlacePickerViewController,
         didSelectGooglePlace googlePlace: GooglePlace) {}
-    func googlePlacePickerViewControllerDidPressCancelButton(googlePlacePickerViewController: GooglePlacePickerViewController) {}
+    func googlePlacePickerViewControllerDidPressCancelButton(_ googlePlacePickerViewController: GooglePlacePickerViewController) {}
 }
 
-public class GooglePlacePickerViewController: UIViewController, UIViewControllerTransitioningDelegate {
+open class GooglePlacePickerViewController: UIViewController, UIViewControllerTransitioningDelegate {
     
-    @IBOutlet public weak var placeTextField: UITextField?
-    @IBOutlet public weak var placesTableView: UITableView?
-    @IBOutlet public weak var placesIconImageView: UIImageView?
-    @IBOutlet public weak var navigationBar: UINavigationBar?
-    @IBOutlet public weak var leftBarButtonItem: UIBarButtonItem?
-    @IBOutlet public weak var rightBarButtonItem: UIBarButtonItem?
+    @IBOutlet open weak var placeTextField: UITextField?
+    @IBOutlet open weak var placesTableView: UITableView?
+    @IBOutlet open weak var placesIconImageView: UIImageView?
+    @IBOutlet open weak var navigationBar: UINavigationBar?
+    @IBOutlet open weak var leftBarButtonItem: UIBarButtonItem?
+    @IBOutlet open weak var rightBarButtonItem: UIBarButtonItem?
     
-    public var placeIconChoosed: UIImage?
-    public var placeIconNotChoosed: UIImage?
+    open var placeIconChoosed: UIImage?
+    open var placeIconNotChoosed: UIImage?
     
-    private let googlePlacesCellIdentifier = "GooglePlacesCellIdentifier"
-    private let googlePlacesNibNameIdentifier = "GooglePlacesCell"
-    private let googlePlacePickerViewControllerNibNameIdentifier = "GooglePlacePickerViewController"
+    fileprivate let googlePlacesCellIdentifier = "GooglePlacesCellIdentifier"
+    fileprivate let googlePlacesNibNameIdentifier = "GooglePlacesCell"
+    fileprivate let googlePlacePickerViewControllerNibNameIdentifier = "GooglePlacePickerViewController"
     
-    public var navigationBarColor: UIColor = UIColor(red: 104/255, green: 203/255, blue: 223/255, alpha: 1.0)
+    open var navigationBarColor: UIColor = UIColor(red: 104/255, green: 203/255, blue: 223/255, alpha: 1.0)
     
-    public var autocompletePlaces: [GooglePlace] = []
+    open var autocompletePlaces: [GooglePlace] = []
     
-    public var delegate: GooglePlacePickerViewControllerDelegate?
+    open var delegate: GooglePlacePickerViewControllerDelegate?
     
     var googlePlacesReciever = GooglePlacesReciever()
     
-    public var selectedGooglePlace: GooglePlace?
+    open var selectedGooglePlace: GooglePlace?
     
-    private let currentBoundle: NSBundle
+    fileprivate let currentBoundle: Bundle
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         self.placeTextField?.becomeFirstResponder()
-        self.placeTextField?.addTarget(self, action: "placeTextFieldDidChange", forControlEvents: .EditingChanged)
-        self.placesTableView?.registerNib(UINib(nibName: self.googlePlacesNibNameIdentifier, bundle: self.currentBoundle),
+        self.placeTextField?.addTarget(self, action: #selector(GooglePlacePickerViewController.placeTextFieldDidChange), for: .editingChanged)
+        self.placesTableView?.register(UINib(nibName: self.googlePlacesNibNameIdentifier, bundle: self.currentBoundle),
             forCellReuseIdentifier: self.googlePlacesCellIdentifier)
         self.updateUI()
     }
     
-    public func updateUI() {
+    open func updateUI() {
         self.view.layer.cornerRadius = 4
-        self.placeIconChoosed = UIImage(named: "place_icon_choosed", inBundle: self.currentBoundle, compatibleWithTraitCollection: nil)
-        self.placeIconNotChoosed = UIImage(named: "place_icon_notChoosed", inBundle: self.currentBoundle, compatibleWithTraitCollection: nil)
+        self.placeIconChoosed = UIImage(named: "place_icon_choosed", in: self.currentBoundle, compatibleWith: nil)
+        self.placeIconNotChoosed = UIImage(named: "place_icon_notChoosed", in: self.currentBoundle, compatibleWith: nil)
         self.placesIconImageView?.image = self.placeIconNotChoosed
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        self.currentBoundle = NSBundle(forClass: GooglePlacePickerViewController.self)
+        self.currentBoundle = Bundle(for: GooglePlacePickerViewController.self)
         super.init(coder: aDecoder)
         self.commonInit()
     }
     
-    override public init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: NSBundle!)  {
-        self.currentBoundle = NSBundle(forClass: GooglePlacePickerViewController.self)
+    override public init(nibName nibNameOrNil: String!, bundle nibBundleOrNil: Bundle!)  {
+        self.currentBoundle = Bundle(for: GooglePlacePickerViewController.self)
         super.init(nibName: self.googlePlacePickerViewControllerNibNameIdentifier, bundle: self.currentBoundle)
         self.commonInit()
     }
     
-    private func commonInit() {
-        self.modalPresentationStyle = .Custom
+    fileprivate func commonInit() {
+        self.modalPresentationStyle = .custom
         self.transitioningDelegate = self
     }
     
@@ -86,7 +106,7 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
         self.initList()
     }
     
-    private func checkMaxLength(textField: UITextField!, maxLength: Int) {
+    fileprivate func checkMaxLength(_ textField: UITextField!, maxLength: Int) {
         if (textField.text?.characters.count > maxLength) {
             textField.deleteBackward()
         }
@@ -94,14 +114,14 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
     
     //MARK UIViewControllerTransitioningDelegate methods
     
-    public func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
+    open func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         if presented == self {
-            return GooglePlacesPresentationController(presentedViewController: presented, presentingViewController: presenting)
+            return GooglePlacesPresentationController(presentedViewController: presented, presenting: presenting)
         }
         return nil
     }
     
-    public func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if presented == self {
             return GooglePlacesPresentationAnimationController(isPresenting: true)
         } else {
@@ -109,7 +129,7 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
         }
     }
     
-    public func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    open func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if dismissed == self {
             return GooglePlacesPresentationAnimationController(isPresenting: false)
         } else {
@@ -117,30 +137,30 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
         }
     }
     
-    @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
         self.delegate?.googlePlacePickerViewControllerDidPressCancelButton(self)
     }
     
-    @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         if let selectedGooglePlace = self.selectedGooglePlace {
             self.delegate?.googlePlacePicker(self, didSelectGooglePlace: selectedGooglePlace)
         }
     }
     
-    private func initList() {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+    fileprivate func initList() {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.default).async {
             if let txtPlaceText = self.placeTextField?.text {
                 let googlePlaces = self.googlePlacesReciever.googlePlacesByKeyWord(txtPlaceText)
-                if let predictions = googlePlaces.valueForKey("predictions") as? [AnyObject] {
+                if let predictions = googlePlaces.value(forKey: "predictions") as? [AnyObject] {
                     self.autocompletePlaces = predictions.flatMap{
-                        if let description = $0.valueForKey("description") as? String,
-                            placeId = $0.valueForKey("place_id") as? String {
+                        if let description = $0.value(forKey: "description") as? String,
+                            let placeId = $0.value(forKey: "place_id") as? String {
                                 return GooglePlace(placeId: placeId, description: description)
                         }
                         return nil
                     }
                     
-                    dispatch_async(dispatch_get_main_queue()) {
+                    DispatchQueue.main.async {
                         self.placesTableView?.reloadData()
                     }
                 }
@@ -149,34 +169,34 @@ public class GooglePlacePickerViewController: UIViewController, UIViewController
     }
     
     // MARK: - Table view data source
-    func tableView(tableView: UITableView?, didSelectRowAtIndexPath indexPath: NSIndexPath?) {
+    func tableView(_ tableView: UITableView?, didSelectRowAtIndexPath indexPath: IndexPath?) {
         if let indexPath = indexPath {
-            self.placeTextField?.text = getPlaceName(indexPath.row)
+            self.placeTextField?.text = getPlaceName((indexPath as NSIndexPath).row)
             self.placesIconImageView?.image = self.placeIconChoosed
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(_ tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.autocompletePlaces.count
     }
     
-    func tableView(tableView: UITableView,
-        cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier(self.googlePlacesCellIdentifier,
-                forIndexPath: indexPath)
-            self.selectedGooglePlace = self.autocompletePlaces[indexPath.row]
-            cell.textLabel?.text = getPlaceName(indexPath.row)
+    func tableView(_ tableView: UITableView,
+        cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: self.googlePlacesCellIdentifier,
+                for: indexPath)
+            self.selectedGooglePlace = self.autocompletePlaces[(indexPath as NSIndexPath).row]
+            cell.textLabel?.text = getPlaceName((indexPath as NSIndexPath).row)
             return cell
     }
     
-    func getPlaceName(indexPath: Int) -> String {
+    func getPlaceName(_ indexPath: Int) -> String {
         if let item =  self.autocompletePlaces[indexPath].description {
-            if let index = item.rangeOfString(",")?.startIndex {
-                return item.substringToIndex(index)
+            if let index = item.range(of: ",")?.lowerBound {
+                return item.substring(to: index)
             }
             return item
         }
