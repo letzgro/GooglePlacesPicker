@@ -14,13 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         
-        GooglePlaces.googlePlacesAPIKey = "AIzaSyBfCc-2bMadlggAkkNiCDa33PJFllID30Y"
+        GooglePlacesReciever.googlePlacesAPIKey = "AIzaSyBfCc-2bMadlggAkkNiCDa33PJFllID30Y"
         
-        return true
     }
-
 }
 

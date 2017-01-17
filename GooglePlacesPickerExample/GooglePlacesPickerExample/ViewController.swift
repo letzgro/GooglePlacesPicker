@@ -16,30 +16,30 @@ class ViewController: UIViewController, GooglePlacePickerViewControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.googlePlaceTextField?.addTarget(self, action: "googlePlaceTextFieldDidBeginEditing", forControlEvents: .EditingDidBegin)
+        self.googlePlaceTextField?.addTarget(self, action: #selector(ViewController.googlePlaceTextFieldDidBeginEditing), for: .editingDidBegin)
     }
     
     func googlePlaceTextFieldDidBeginEditing() {
         let alert = GooglePlacePickerViewController()
         alert.delegate = self
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: GooglePlacePickerViewControllerDelegate
     
-    func googlePlacePicker(googlePlacePickerViewController: GooglePlacePickerViewController,
+    func googlePlacePicker(_ googlePlacePickerViewController: GooglePlacePickerViewController,
         didSelectGooglePlace googlePlace: GooglePlace) {
             self.googlePlaceTextField?.text = googlePlace.description
             self.dismissGooglePlacesPicker()
     }
     
-    func googlePlacePickerViewControllerDidPressCancelButton(googlePlacePickerViewController: GooglePlacePickerViewController) {
+    func googlePlacePickerViewControllerDidPressCancelButton(_ googlePlacePickerViewController: GooglePlacePickerViewController) {
         self.dismissGooglePlacesPicker()
     }
     
     private func dismissGooglePlacesPicker() {
-        self.googlePlaceTextField?.enabled = true
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.googlePlaceTextField?.isEnabled = true
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

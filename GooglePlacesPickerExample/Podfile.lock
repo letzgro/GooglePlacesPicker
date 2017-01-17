@@ -1,10 +1,12 @@
 PODS:
-  - GooglePlacesPicker (0.1.0)
+  - GooglePlacesPicker (1.2)
 
 DEPENDENCIES:
   - GooglePlacesPicker
 
 SPEC CHECKSUMS:
-  GooglePlacesPicker: 4fb4aa49b62f42272edf48b8ee58c6be851abe52
+  GooglePlacesPicker: 7fc917a2b8800d7d5a46ff1bfc4c0939c0e4e12e
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: d151f6b6663e1d9cf7af05e793df3c015b0e42bf
+
+COCOAPODS: 1.1.1

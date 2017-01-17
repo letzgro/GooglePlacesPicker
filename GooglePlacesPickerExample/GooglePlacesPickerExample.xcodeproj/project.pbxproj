@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B16883E012E1B264B96877AA /* Pods_GooglePlacesPickerExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A053957BCE4FDF855F59EB8 /* Pods_GooglePlacesPickerExample.framework */; };
 		D74835611C6FB2F100085760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74835601C6FB2F100085760 /* AppDelegate.swift */; };
 		D74835631C6FB2F100085760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74835621C6FB2F100085760 /* ViewController.swift */; };
 		D74835661C6FB2F100085760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74835641C6FB2F100085760 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A053957BCE4FDF855F59EB8 /* Pods_GooglePlacesPickerExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GooglePlacesPickerExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B010C6A4AD54D9F570D7E44 /* Pods-GooglePlacesPickerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesPickerExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesPickerExample/Pods-GooglePlacesPickerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		627FF7C686A8D88C18E4F800 /* Pods-GooglePlacesPickerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GooglePlacesPickerExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-GooglePlacesPickerExample/Pods-GooglePlacesPickerExample.release.xcconfig"; sourceTree = "<group>"; };
 		D748355D1C6FB2F100085760 /* GooglePlacesPickerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GooglePlacesPickerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D74835601C6FB2F100085760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D74835621C6FB2F100085760 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16883E012E1B264B96877AA /* Pods_GooglePlacesPickerExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366410EC3FAC05E55E06F567 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B010C6A4AD54D9F570D7E44 /* Pods-GooglePlacesPickerExample.debug.xcconfig */,
+				627FF7C686A8D88C18E4F800 /* Pods-GooglePlacesPickerExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D74835541C6FB2F100085760 = {
 			isa = PBXGroup;
 			children = (
 				D748355F1C6FB2F100085760 /* GooglePlacesPickerExample */,
 				D748355E1C6FB2F100085760 /* Products */,
+				366410EC3FAC05E55E06F567 /* Pods */,
+				E2635C1D581BC83492AD3269 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +88,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E2635C1D581BC83492AD3269 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A053957BCE4FDF855F59EB8 /* Pods_GooglePlacesPickerExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +103,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D748356F1C6FB2F100085760 /* Build configuration list for PBXNativeTarget "GooglePlacesPickerExample" */;
 			buildPhases = (
+				E18487E80CEC0454AE35CAAF /* [CP] Check Pods Manifest.lock */,
 				D74835591C6FB2F100085760 /* Sources */,
 				D748355A1C6FB2F100085760 /* Frameworks */,
 				D748355B1C6FB2F100085760 /* Resources */,
+				6E2918E7169FC71E1F36F368 /* [CP] Embed Pods Frameworks */,
+				4EBB43B756DE8DC98B9095F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,7 +126,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ihor Rapalyuk";
 				TargetAttributes = {
 					D748355C1C6FB2F100085760 = {
@@ -138,6 +165,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EBB43B756DE8DC98B9095F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlacesPickerExample/Pods-GooglePlacesPickerExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E2918E7169FC71E1F36F368 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GooglePlacesPickerExample/Pods-GooglePlacesPickerExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E18487E80CEC0454AE35CAAF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D74835591C6FB2F100085760 /* Sources */ = {
@@ -184,8 +259,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -229,8 +306,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -249,6 +328,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -256,7 +336,9 @@
 		};
 		D74835701C6FB2F100085760 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B010C6A4AD54D9F570D7E44 /* Pods-GooglePlacesPickerExample.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GooglePlacesPickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -268,7 +350,9 @@
 		};
 		D74835711C6FB2F100085760 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 627FF7C686A8D88C18E4F800 /* Pods-GooglePlacesPickerExample.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GooglePlacesPickerExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
