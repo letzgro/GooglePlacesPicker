@@ -193,7 +193,7 @@ open class GooglePlacePickerViewController: UIViewController, UIViewControllerTr
             return cell
     }
     
-    func getPlaceName(_ indexPath: Int) -> String {
+    open func getPlaceName(_ indexPath: Int) -> String {
         if let item =  self.autocompletePlaces[indexPath].description {
             if let index = item.range(of: ",")?.lowerBound {
                 return item.substring(to: index)
