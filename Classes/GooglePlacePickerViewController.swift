@@ -173,6 +173,7 @@ open class GooglePlacePickerViewController: UIViewController, UIViewControllerTr
         if let indexPath = indexPath {
             self.placeTextField?.text = getPlaceName((indexPath as NSIndexPath).row)
             self.placesIconImageView?.image = self.placeIconChoosed
+            self.selectedGooglePlace = self.autocompletePlaces[(indexPath as NSIndexPath).row]
         }
     }
     
@@ -188,12 +189,11 @@ open class GooglePlacePickerViewController: UIViewController, UIViewControllerTr
         cellForRowAtIndexPath indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: self.googlePlacesCellIdentifier,
                 for: indexPath)
-            self.selectedGooglePlace = self.autocompletePlaces[(indexPath as NSIndexPath).row]
             cell.textLabel?.text = getPlaceName((indexPath as NSIndexPath).row)
             return cell
     }
     
-    func getPlaceName(_ indexPath: Int) -> String {
+    open func getPlaceName(_ indexPath: Int) -> String {
         if let item =  self.autocompletePlaces[indexPath].description {
             if let index = item.range(of: ",")?.lowerBound {
                 return item.substring(to: index)
